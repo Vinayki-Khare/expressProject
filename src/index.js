@@ -28,6 +28,10 @@ app.get('/about', function (req, res) {
     res.send('Hello World from about page')
   });
 
+  app.get('*', function (req, res) {
+    res.send("404");
+  });
+
 app.listen(3000, () => {
     console.log("listening")
 })
